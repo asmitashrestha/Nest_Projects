@@ -12,6 +12,10 @@ export class SongsService {
 
   findAll() {
     // fetch the data from the db
-    return this.songs;
+    try {
+      return this.songs;
+    } catch (error) {
+      throw new Error('Error while fetching the datasssss');
+    }
   }
 }
